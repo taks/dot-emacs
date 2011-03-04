@@ -60,3 +60,6 @@
 
 ;; ブックマークの保存位置
 (setq bookmark-default-file "~/.emacs.d/.emacs.bmk")
+
+;;; ediffを1ウィンドウで実行
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
