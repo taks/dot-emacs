@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: orgtbl
+# --
+\iffalse
+#+ORGTBL: SEND $1 orgtbl-to-latex
+|--+--|
+| $0 |  |
+|--+--|
+\fi
+
+% BEGIN RECEIVE ORGTBL $1
+% END RECEIVE ORGTBL $1

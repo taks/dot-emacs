@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# --
+(use gauche.test)
+(test-start "$1 module")
+
+(use $1)
+(test-module '$1)
+
+$0
+
+(test-end)

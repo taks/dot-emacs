@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name : while ... end
+# --
+while ($1)
+    $2
+end

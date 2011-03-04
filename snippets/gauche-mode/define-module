@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+#--
+(define-module $1
+  $0)
+(select-module $1)
+
+
+(provide "${1:$(replace-regexp-in-string "\\\\." "/" text)}")

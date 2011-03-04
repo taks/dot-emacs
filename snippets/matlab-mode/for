@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+#name : for ... end
+# --
+for $1 = $2:$3
+    $4
+end
+

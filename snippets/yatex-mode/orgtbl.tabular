@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: orgtbl-tabular
+# --
+\iffalse
+#+ORGTBL: SEND $1 orgtbl-to-latex :splice t
+|--+--|
+| $0 |  |
+|--+--|
+\fi
+
+\begin{tabular}{cc}
+% BEGIN RECEIVE ORGTBL $1
+% END RECEIVE ORGTBL $1
+\end{tabular}

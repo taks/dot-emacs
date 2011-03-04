@@ -1,0 +1,13 @@
+*.elc
+*~
+
+/*
+!/.gitignore
+!/.gitmodules
+!/README
+!/Rakefile
+!/init.el
+!/init-loader.el
+!/inits/
+!/elisp/
+!/snippets/
