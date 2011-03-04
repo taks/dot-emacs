@@ -1,7 +1,5 @@
 ;;; 40_matlab.el
 
-(add-to-list 'load-path "~/.emacs.d/matlab-mode")
-
 ;; 参考: http://redgecko.jp/d/?date=20070328
 (autoload 'matlab-mode "matlab" "Enter MATLAB mode." t)
 (setq auto-mode-alist (cons '("\\.m\\'" . matlab-mode) auto-mode-alist))
