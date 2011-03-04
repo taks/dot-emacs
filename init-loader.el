@@ -126,7 +126,8 @@ e.x, 00_hoge.el, 01_huga.el ... 99_keybind.el"
 
 (defun init-loader--re-load-files (re dir &optional sort)
     (loop for el in (directory-files dir t)
-          when (string-match re (file-name-nondirectory el))
+          when (and (string-match re (file-name-nondirectory el))
+                    (string-match "\\.el\\'" el))
           collect (file-name-nondirectory el) into ret
           finally return (if sort (sort ret 'string<) ret)))
 
