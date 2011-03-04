@@ -66,7 +66,8 @@
 (setq warning-suppress-types nil)
 (progn
   (require 'init-loader)
-  (setq init-loader-show-log-after-init nil)
+  ;; オブション"--debug-init"が指定された場合にはログバッファを表示
+  (setq init-loader-show-log-after-init debug-on-error)
   (init-loader-load))
 
 ;; サーバーの起動
