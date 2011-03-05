@@ -62,7 +62,7 @@
       (toggle-selective-display column)))
   (global-set-key (kbd "M-+") 'toggle-hiding))
 
-(progn
+(when (locate-library "hideshowvis")
   ;; hideshowvis
   ;; @see: http://d.hatena.ne.jp/uhiaha888/20100720/1279618275
   (autoload 'hideshowvis-enable "hideshowvis" "Highlight foldable regions")
