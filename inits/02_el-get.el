@@ -12,7 +12,14 @@
         yasnippet
         (:name anything-c-yasnippet :type http
                :url "http://svn.coderepos.org/share/lang/elisp/anything-c-yasnippet/anything-c-yasnippet.el" )
-        color-theme
+
+        (:name color-theme-bzr :type bzr
+               :url "bzr://bzr.savannah.nongnu.org/color-theme/trunk"
+               :load "color-theme.el"
+               :features "color-theme"
+               :post-init (lambda ()
+                            (color-theme-initialize)
+                            (setq color-theme-is-global t)))
 
         auto-complete
 
