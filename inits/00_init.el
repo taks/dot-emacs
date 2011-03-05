@@ -2,8 +2,7 @@
 ;; 基本的な設定
 
 (setq custom-file "~/.emacs.d/customize.el")
-;; (load custom-file t)               ;;customizeによる設定を.emacsから分離
-(load "customize")
+(load custom-file t)               ;;customizeによる設定を.emacsから分離
 
 (set-scroll-bar-mode 'right)    ; スクロールバーを右に表示
 (setq frame-title-format (format "emacs@%s : %%f" (system-name))) ; タイトルバーの設定
