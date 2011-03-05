@@ -126,6 +126,27 @@
 ;; @see: http://d.hatena.ne.jp/peccu/20100202/1265088619
 (cua-mode t)
 (setq cua-enable-cua-keys nil) ;; 変なキーバインド禁止
+
+;; @see: http://d.hatena.ne.jp/kitokitoki/20110305/]
+(defadvice cua-sequence-rectangle (around my-cua-sequence-rectangle activate)
+  "連番を挿入するとき、マークしているところの文字を上書きしないで左にずらす"
+  (interactive
+   (list (if current-prefix-arg
+             (prefix-numeric-value current-prefix-arg)
+           (string-to-number
+            (read-string "Start value: (0) " nil nil "0")))
+         (string-to-number
+          (read-string "Increment: (1) " nil nil "1"))
+         (read-string (concat "Format: (" cua--rectangle-seq-format ") "))))
+  (if (= (length format) 0)
+      (setq format cua--rectangle-seq-format)
+    (setq cua--rectangle-seq-format format))
+  (cua--rectangle-operation 'clear nil t 1 nil
+     '(lambda (s e l r)
+         (kill-region s e)
+         (insert (format format first))
+         (yank)
+         (setq first (+ first incr)))))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; windows.el + revive.el
 ;; (auto-install-from-url "http://www.gentei.org/~yuuji/software/windows.el")
