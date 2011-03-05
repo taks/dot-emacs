@@ -5,8 +5,6 @@
 (setq show-paren-style 'mixed) ; 対応する括弧が外にある時は全体を色付きに
 
 ;;色の設定
-(load "color-theme")
-(color-theme-initialize)
 (color-theme-calm-forest)
 
 ;; タブ, 全角スペース、改行直前の半角スペースを表示する
