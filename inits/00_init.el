@@ -62,3 +62,6 @@
 
 ;;; ediffを1ウィンドウで実行
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
+
+;; "Save abbrevs in ~/.emacs.d/.abbrev_defs?" を聞かれないようにする
+(setq save-abbrevs 'silently)
