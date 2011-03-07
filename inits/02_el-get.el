@@ -14,7 +14,7 @@
                :url "http://svn.coderepos.org/share/lang/elisp/anything-c-yasnippet/anything-c-yasnippet.el" )
 
         (:name color-theme-bzr :type bzr
-               :url "bzr://bzr.savannah.nongnu.org/color-theme/trunk"
+               :url "http://bzr.savannah.nongnu.org/r/color-theme/trunk"
                :load "color-theme.el"
                :features "color-theme"
                :post-init (lambda ()
