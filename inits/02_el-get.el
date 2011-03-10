@@ -68,6 +68,9 @@
 
         smartchr
 
+        ;; ruby関連
+        ruby-block
+
         (:name sequential-command :type emacswiki)
         (:name sequential-command-config :type emacswiki)
 

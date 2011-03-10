@@ -32,13 +32,13 @@
 the directory containing file becomes the initial working directory
 and source-file directory for your debugger." t)
 
-;; (progn
-;;   ;; ruby-block
-;;   (require 'ruby-block)
-;;   (ruby-block-mode t)
-;;   ;; ミニバッファに表示し, かつ, オーバレイする.
-;;   (setq ruby-block-highlight-toggle t)
-;;   )
+(progn
+  ;; ruby-block
+  (require 'ruby-block)
+  (ruby-block-mode t)
+  ;; ミニバッファに表示し, かつ, オーバレイする.
+  (setq ruby-block-highlight-toggle t)
+  )
 
 (progn
   ;; flymake for ruby
