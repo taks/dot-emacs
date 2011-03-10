@@ -80,7 +80,7 @@
         (:name shell-pop :type emacswiki)
 
         (:name revive :type http :url "http://www.gentei.org/~yuuji/software/revive.el")
-        windows
+        (:name windows-from-http :type http :url "http://www.gentei.org/~yuuji/software/windows.el")
 
         sunrise-commander
 

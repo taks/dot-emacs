@@ -149,9 +149,6 @@
          (setq first (+ first incr)))))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; windows.el + revive.el
-;; (auto-install-from-url "http://www.gentei.org/~yuuji/software/windows.el")
-;; (auto-install-from-url "http://www.gentei.org/~yuuji/software/revive.el")
-(add-to-list 'load-path "~/.emacs.d/el-get/windows-mode")
 (defvar win:switch-prefix "\C-z")
 (require 'windows)
 (setq win:use-frame nil)
