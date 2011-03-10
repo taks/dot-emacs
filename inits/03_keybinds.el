@@ -33,12 +33,16 @@
   (global-set-key (kbd "C-j") 'next-line)
   (global-set-key (kbd "C-k") 'previous-line)
   (global-set-key (kbd "C-l") 'forward-char)
+  (global-set-key (kbd "M-h") 'backward-word)
+  (global-set-key (kbd "M-l") 'forward-word)
   (global-unset-key (kbd "C-f"))
   (global-unset-key (kbd "C-b"))
   (global-unset-key (kbd "C-p"))
   (global-set-key (kbd "C-n") 'recenter)
   (global-unset-key (kbd "C-e"))
   (global-unset-key (kbd "C-a"))
+  (global-unset-key (kbd "M-b"))
+  (global-unset-key (kbd "M-f"))
 
   (load "vz")
   ;; sequential-command
