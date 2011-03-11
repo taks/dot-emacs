@@ -62,11 +62,9 @@
 (global-set-key (kbd "C-x C-q") 'view-mode)
 (add-hook 'view-mode-hook
           '(lambda()
-             ;; (define-key view-mode-map "j" 'backward-char)
-             (define-key view-mode-map "k" 'View-scroll-line-forward)
-             (define-key view-mode-map "l" 'View-scroll-line-backward)
-             ;; (define-key view-mode-map ";" 'forward-char)
-             (define-key view-mode-map (kbd "C-j") 'backward-char)))
+             (define-key view-mode-map "j" 'View-scroll-line-forward)
+             (define-key view-mode-map "k" 'View-scroll-line-backward)
+             (define-key view-mode-map (kbd "C-j") nil)))
 
 (progn
   ;; @see: http://d.hatena.ne.jp/rubikitch/20081104/1225745862
