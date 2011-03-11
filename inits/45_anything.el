@@ -4,8 +4,8 @@
 (require 'anything-startup)
 (progn
   ;; キーバインド
-  (define-key anything-map (kbd "C-k") 'anything-next-line)
-  (define-key anything-map (kbd "C-l") 'anything-previous-line)
+  (define-key anything-map (kbd "C-j") 'anything-next-line)
+  (define-key anything-map (kbd "C-k") 'anything-previous-line)
   (define-key anything-map (kbd "C-p") nil)
   (define-key anything-map (kbd "C-n") nil)
   )
