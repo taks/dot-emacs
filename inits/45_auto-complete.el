@@ -17,8 +17,8 @@
 (setq ac-use-quick-help nil)
 ;; キー設定
 (define-key ac-completing-map (kbd "C-m") 'ac-complete)
-(define-key ac-completing-map (kbd "C-k") 'ac-next)
-(define-key ac-completing-map (kbd "C-l") 'ac-previous)
+(define-key ac-completing-map (kbd "C-j") 'ac-next)
+(define-key ac-completing-map (kbd "C-k") 'ac-previous)
 (define-key ac-completing-map (kbd "<C-tab>") 'ac-stop)
 
 ;; 補完対象のモードを追加
