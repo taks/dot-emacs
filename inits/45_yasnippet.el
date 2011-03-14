@@ -9,11 +9,7 @@
 (global-set-key (kbd "C-c y") 'anything-c-yas-complete)
 (yas/initialize)
 
-(setq yas/root-directory
-      (list
-       ;; TODO
-       ;; "~/.emacs.d/elisp/yasnippet/snippets"
-       "~/.emacs.d/snippets"))
+(add-to-list 'yas/root-directory "~/.emacs.d/snippets")
 (if (listp yas/root-directory)
     (dolist (directory yas/root-directory)
       (yas/load-directory directory))
