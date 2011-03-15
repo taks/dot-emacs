@@ -4,6 +4,11 @@
 (transient-mark-mode t)  ; 選択されたリージョンを色付きにしてわかりやすくする設定
 (setq show-paren-style 'mixed) ; 対応する括弧が外にある時は全体を色付きに
 
+;; EOF を分かり易くする
+;; @see: http://d.hatena.ne.jp/khiker/20100114/emacs_eof
+(setq-default indicate-empty-lines t)
+(set-face-foreground 'fringe "white")
+
 ;;色の設定
 (color-theme-calm-forest)
 
