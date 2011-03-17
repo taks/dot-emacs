@@ -70,6 +70,7 @@
 
         ;; ruby関連
         ruby-block
+        ruby-end
 
         (:name sequential-command :type emacswiki)
         (:name sequential-command-config :type emacswiki)
