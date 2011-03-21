@@ -60,6 +60,7 @@
                :load-path ("." "contrib")
                :compile (".")
                )
+        ac-slime
         (:name rinari-taks :type git
                :url "https://github.com/taks/rinari.git"
                :load-path ("." "util" "util/jump")

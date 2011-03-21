@@ -5,3 +5,7 @@
 (require 'slime)
 (setq slime-net-coding-system 'utf-8-unix)
 (slime-setup)
+(add-hook 'slime-mode-hook
+          (lambda ()
+            (require 'ac-slime)
+            (set-up-slime-ac)))
