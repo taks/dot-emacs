@@ -58,6 +58,13 @@
     (setq local-coding-system 'euc-japan)))
   )
 
+;;; 実行パスの設定
+(dolist (dir (list
+              (expand-file-name "~/.emacs.d/bin")))
+  (when (and (file-exists-p dir) (not (member dir exec-path)))
+    (setenv "PATH" (concat dir ":" (getenv "PATH")))
+    (setq exec-path (append (list dir) exec-path))))
+
 ;; load-path の設定
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/elisp")
