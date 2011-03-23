@@ -1,0 +1,2 @@
+#!/bin/sh
+ruby -Ke -I ~/.emacs.d/data/rubyrefm/bitclust/lib ~/.emacs.d/data/rubyrefm/bitclust/bin/refe.rb -d ~/.emacs.d/data/rubyrefm/db-1_9_2 $*

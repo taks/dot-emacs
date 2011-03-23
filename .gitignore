@@ -8,6 +8,7 @@
 !/Rakefile
 !/init.el
 !/init-loader.el
+!/bin/
 !/inits/
 !/elisp/
 !/snippets/

@@ -30,6 +30,22 @@ task :clean_backupfiles do
   sh 'find ~/.emacs.d/backup -mtime +30 -exec rm -f {} \ '
 end
 
+DATA_DIR = "data"
+desc "get ruby refm files"
+task :rubyrefm => DATA_DIR do
+  cd DATA_DIR do
+    sh "curl -O http://doc.okkez.net/archives/201102/ruby-refm-1.9.2-dynamic-20110228.tar.gz"
+    sh "tar xzf ruby-refm-1.9.2-dynamic-20110228.tar.gz"
+    sh "mv ruby-refm-1.9.2-dynamic-20110228 rubyrefm"
+    cd 'rubyrefm/bitclust' do
+      sh "(ruby -Ilib bin/bitclust.rb --database ../db-1_9_2 list --class;" +
+        "  ruby -Ilib bin/bitclust.rb --database ../db-1_9_2 list --method;" +
+        "  ruby -Ilib bin/bitclust.rb --database ../db-1_9_2 list --library) > refe.index"
+    end
+  end
+end
+directory DATA_DIR
+
 CLEAN.exclude(".git/*")
 CLEAN.exclude("backup/*~")
 CLOBBER.include("elisp/*.elc")

@@ -85,3 +85,5 @@ and source-file directory for your debugger." t)
 (require 'rhtml-mode)
 (add-hook 'rhtml-mode-hook
           (lambda () (rinari-launch)))
+
+(require 'anything-refe)
