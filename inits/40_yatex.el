@@ -14,7 +14,7 @@
 
 (setq tex-command "platex")
 (setq dvi2-command "xdvi -geo +0+0 -s 4")
-(setq dviprint-command-format "~/bin/dvipdfmr --view %s")
+(setq dviprint-command-format "dvipdfmx %s && evince %s.pdf")
 (setq makeindex-command "mendex -r -c -g -s dot.ist -p")
 
 (eval-after-load

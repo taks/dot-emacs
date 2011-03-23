@@ -76,7 +76,22 @@
 ;;   (set-face-foreground 'my-YaTeX-font-lock-formula-face "green4")  ;; 色の決定
 ;;   (set-face-bold-p 'my-YaTeX-font-lock-formula-face t)                 ;; 太字にする
 ;;   (setq YaTeX-font-lock-formula-face 'my-YaTeX-font-lock-formula-face)
-;;   )k
+;;   )
+
+;; dviprint-command-format 変数の %s に，
+;; ファイルの拡張子".dvi"がつかないように変更．
+;; また，%s を複数使えるようにした．
+(defadvice YaTeX-lpr (around my-YaTeX-lpr-around activate)
+  "dviprint-command-fomat の %s を事前に置き換える"
+  (let ((dviprint-command-format
+         (replace-regexp-in-string
+          "%s"
+          (if (get 'dvi2-command 'region)
+              (substring YaTeX-texput-file
+                         0 (rindex YaTeX-texput-file ?.))
+            (YaTeX-get-preview-file-name  ""))
+          dviprint-command-format)))
+    ad-do-it))
 
 (provide 'yatex-patch)
 ;;; yatex-patch.el end here
