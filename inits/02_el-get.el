@@ -99,9 +99,12 @@
 
         ;; @see: http://d.hatena.ne.jp/m2ym/20110120/1295524932
         (:name popwin :type git :url "https://github.com/m2ym/popwin-el.git"
+               :load-path ("." "misc")
                :features popwin
                :after (lambda ()
-                        (setq display-buffer-function 'popwin:display-buffer)))
+                        (setq display-buffer-function 'popwin:display-buffer)
+                        (require 'popwin-yatex)
+                        (push '("*YaTeX-typesetting*") popwin:special-display-config)))
 
         ;;; anything-replace-string
         ;; @see: http://emacs.g.hatena.ne.jp/k1LoW/20110107/1294408979
