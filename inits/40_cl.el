@@ -4,7 +4,7 @@
 (setq inferior-lisp-program "~/opt/ccl/lx86cl")
 (require 'slime)
 (setq slime-net-coding-system 'utf-8-unix)
-(slime-setup)
+(slime-setup '(slime-repl))
 (add-hook 'slime-mode-hook
           (lambda ()
             (require 'ac-slime)
