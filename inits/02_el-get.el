@@ -35,6 +35,12 @@
         ;; @see: http://d.hatena.ne.jp/rubikitch/20091224/recentf
         (:name recentf-ext :type emacswiki :features recentf-ext)
 
+        (:name redo+ :type emacswiki
+               :after (lambda ()
+                        (require 'redo+)
+                        (global-set-key (kbd "C-M-/") 'redo)
+                        (setq undo-no-redo t)))
+
         nav
 
         ;; historyf
