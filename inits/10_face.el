@@ -65,7 +65,7 @@
 (when window-system
     (if linux-p (add-to-list 'default-frame-alist '(alpha . 90))) ; 透明化
     ;; フォントの設定
-    (set-default-font "VL Gothic-15")
+    (add-to-list 'default-frame-alist '(font . "VL Gothic-15"))
     (set-fontset-font (frame-parameter nil 'font)
                       'japanese-jisx0208
                       '("VL Gothic" . "unicode-bmp")))
