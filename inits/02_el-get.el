@@ -41,6 +41,12 @@
                         (global-set-key (kbd "C-M-/") 'redo)
                         (setq undo-no-redo t)))
 
+        (:name goto-chg-git :type git :url "https://github.com/martinp26/goto-chg.git"
+               :features goto-chg
+               :after (lambda ()
+                        (global-set-key (kbd "C-.") 'goto-last-change)
+                        (global-set-key (kbd "C-,") 'goto-last-change-reverse)))
+
         nav
 
         ;; historyf
