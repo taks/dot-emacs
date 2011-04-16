@@ -59,13 +59,7 @@
     (global-set-key (kbd "C-:") 'seq-end))
   )
 
-(progn
-  ;;概略表示付きyank-popの設定
-  (autoload 'yank-pop-forward "yank-pop-summary" nil t)
-  (autoload 'yank-pop-backward "yank-pop-summary" nil t)
-  (global-set-key (kbd "M-y") 'yank-pop-forward)
-  (global-set-key (kbd "C-M-y") 'yank-pop-backward)
-  )
+(global-set-key (kbd "M-y") 'anything-show-kill-ring)
 
 
 ;;window-sysytemでの設定
