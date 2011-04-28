@@ -114,9 +114,7 @@
                :load-path ("." "misc")
                :features popwin
                :after (lambda ()
-                        (setq display-buffer-function 'popwin:display-buffer)
-                        (require 'popwin-yatex)
-                        (push '("*YaTeX-typesetting*") popwin:special-display-config)))
+                        (setq display-buffer-function 'popwin:display-buffer)))
 
         ;;; anything-replace-string
         ;; @see: http://emacs.g.hatena.ne.jp/k1LoW/20110107/1294408979
