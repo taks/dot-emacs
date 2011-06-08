@@ -86,6 +86,13 @@
         (:name matlab-emacs :type git :url "https://github.com/ruediger/matlab-emacs.git"
                :build ("make")
                :load-path ("."))
+        (:name my-ess
+               :type svn
+               :url "https://svn.r-project.org/ESS/trunk/"
+               :info "doc/info/"
+               :build `(,(concat "make --directory=lisp all EMACS=" el-get-emacs))
+               :load-path ("lisp")
+               :features ess-site)
 
         smartchr
 
