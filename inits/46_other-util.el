@@ -166,3 +166,19 @@
 ;; (auto-install-from-emacswiki "wgrep.el")
 ;; (require 'wgrep)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; moz.el
+
+;; MozReplのポート番号。
+;; (setq moz-repl-port 24242)
+
+(defun moz-send-reload ()
+  (interactive)
+  (comint-send-string
+   (inferior-moz-process)
+   ;; URLのホスト部がlocalhostの場合のみリロード
+   "if (content.location.host.indexOf('localhost') != -1) { BrowserReload(); }"))
+(add-hook 'after-save-hook
+          '(lambda ()
+             (if (string-match "\.\\(html\\|css\\|js\\|php\\)" (buffer-file-name))
+                 (moz-send-reload))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
