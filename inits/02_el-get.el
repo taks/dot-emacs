@@ -64,14 +64,7 @@
         lua-mode
         yaml-mode
         quack
-        (:name slime-git
-               :type git
-               :module "slime"
-               :info "doc"
-               :url "http://sbcl.boinkor.net/git/slime.git"
-               :load-path ("." "contrib")
-               :compile (".")
-               )
+        slime
         ac-slime
         (:name rinari-taks :type git
                :url "https://github.com/taks/rinari.git"
