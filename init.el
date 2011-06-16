@@ -59,11 +59,11 @@
   )
 
 ;;; 実行パスの設定
-(dolist (dir (list
-              (expand-file-name "~/.emacs.d/bin")))
+(defun add-path (dir)
   (when (and (file-exists-p dir) (not (member dir exec-path)))
     (setenv "PATH" (concat dir ":" (getenv "PATH")))
     (setq exec-path (append (list dir) exec-path))))
+(add-path (expand-file-name "~/.emacs.d/bin"))
 
 ;; load-path の設定
 (add-to-list 'load-path "~/.emacs.d")
