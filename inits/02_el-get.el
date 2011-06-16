@@ -94,6 +94,8 @@
         ruby-block
         ruby-end
 
+        haskell-mode
+
         (:name sequential-command :type emacswiki)
         (:name sequential-command-config :type emacswiki)
 
