@@ -19,6 +19,17 @@
 (require 'file-time-stamp)
 (add-hook 'c-mode-common-hook 'file-time-stamp-mode)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; 選択範囲の情報表示
+;; @see: http://murakan.cocolog-nifty.com/blog/2011/06/emacs-e05e.html
+(defun count-lines-and-chars ()
+  (if mark-active
+      (format "[%3d:%4d]"
+              (count-lines (region-beginning) (region-end))
+              (- (region-end) (region-beginning)))
+    ""))
+(add-to-list 'default-mode-line-format
+             '(:eval (count-lines-and-chars)))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;対括弧移動
 ;(require 'mic-paren)
 ;(defun my-paren (ARG)
