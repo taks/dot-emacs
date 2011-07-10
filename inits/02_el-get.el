@@ -66,6 +66,7 @@
         quack
         slime
         ac-slime
+        (:name cl-indent-patches :type git :url "https://github.com/m2ym/cl-indent-patches-el.git")
         (:name rinari-taks :type git
                :url "https://github.com/taks/rinari.git"
                :load-path ("." "util" "util/jump")

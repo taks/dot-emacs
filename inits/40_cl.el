@@ -19,3 +19,13 @@
 (push '(sldb-mode :stick t) popwin:special-display-config)
 (push '(slime-repl-mode) popwin:special-display-config)
 (push '(slime-connection-list-mode) popwin:special-display-config)
+
+;; インデントの修正
+(when (require 'cl-indent-patches nil t)
+  ;; emacs-lispのインデントと混同しないように
+  (setq lisp-indent-function
+        (lambda (&rest args)
+          (apply (if (memq major-mode '(emacs-lisp-mode lisp-interaction-mode))
+                     'lisp-indent-function
+                   'common-lisp-indent-function)
+                 args))))
