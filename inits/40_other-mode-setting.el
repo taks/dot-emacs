@@ -99,3 +99,6 @@
 ;;              (local-set-key (kbd "M-s") 'gtags-find-symbol)
 ;;              (local-set-key (kbd "C-t") 'gtags-pop-stack)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ajc-java-complete
+(require 'ajc-java-complete-config)
+(add-hook 'java-mode-hook 'ajc-java-complete-mode)

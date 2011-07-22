@@ -88,6 +88,8 @@
                :build `(,(concat "make --directory=lisp all EMACS=" el-get-emacs))
                :load-path ("lisp")
                :features ess-site)
+        (:name ajc-java-complete :type git :url "https://github.com/jixiuf/ajc-java-complete.git"
+               :build ("javac Tags.java" "java Tags"))
 
         smartchr
 
