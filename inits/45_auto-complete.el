@@ -26,7 +26,7 @@
   (setq ac-modes
         (append ac-modes
                 (list 'd-mode 'yatex-mode 'matlab-mode
-                      'gauche-mode 'scheme-mode))))
+                      'gauche-mode 'scheme-mode 'ess-mode))))
 ;; 色の変更
 (add-hook 'AC-mode-hook
           (set-face-background 'ac-selection-face "gray35"))
