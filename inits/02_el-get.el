@@ -88,6 +88,10 @@
                :build `(,(concat "make --directory=lisp all EMACS=" el-get-emacs))
                :load-path ("lisp")
                :features ess-site)
+        (:name auto-complete-acr :type git
+               :url "https://github.com/myuhe/auto-complete-acr.el.git"
+               :features auto-complete-acr)
+
         (:name ajc-java-complete :type git :url "https://github.com/jixiuf/ajc-java-complete.git"
                :build ("javac Tags.java" "java Tags"))
 
