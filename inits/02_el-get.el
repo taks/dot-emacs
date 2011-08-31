@@ -89,7 +89,7 @@
                :load-path ("lisp")
                :features ess-site)
         (:name auto-complete-acr :type git
-               :url "https://github.com/myuhe/auto-complete-acr.el.git"
+               :url "https://github.com/taks/auto-complete-acr.el.git"
                :features (auto-complete-acr ess-R-object-popup))
 
         (:name ajc-java-complete :type git :url "https://github.com/jixiuf/ajc-java-complete.git"
