@@ -1,7 +1,6 @@
 ;;; 45_anything.el ---
 ;; anything 関連の設定
 
-(require 'anything-startup)
 (progn
   ;; キーバインド
   (define-key anything-map (kbd "C-j") 'anything-next-line)

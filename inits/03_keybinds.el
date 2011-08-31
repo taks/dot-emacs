@@ -86,3 +86,6 @@
 ;;; emacs-nav
   (require 'nav)
   (global-set-key (kbd "C-x C-d") 'nav-toggle))
+
+;;; anything
+(global-set-key (kbd "M-x") 'anything-M-x)
