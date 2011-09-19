@@ -67,6 +67,11 @@
         slime
         ac-slime
         (:name cl-indent-patches :type git :url "https://github.com/m2ym/cl-indent-patches-el.git")
+        (:name cl-test-more :type http
+               :url "https://raw.github.com/netpyoung/emacs-config/master/cl-test-more/cl-test-more.el"
+               :after (lambda ()
+                        (add-hook 'slime-load-hook (lambda () (require 'cl-test-more)))))
+
         (:name rinari-taks :type git
                :url "https://github.com/taks/rinari.git"
                :load-path ("." "util" "util/jump")
