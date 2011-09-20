@@ -1,6 +1,9 @@
 ;;; 45_anything.el ---
 ;; anything 関連の設定
 
+(require 'anything-complete)
+(require 'anything-show-completion)
+
 (progn
   ;; キーバインド
   (define-key anything-map (kbd "C-j") 'anything-next-line)
