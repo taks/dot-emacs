@@ -25,4 +25,7 @@
 (setq mew-use-thread-separator nil)
 ;; 未読の表示
 (setq mew-use-unread-mark t)
+(eval-after-load "mew"
+  '(set-face-foreground 'mew-face-mark-unread "white"))
+
 
