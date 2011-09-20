@@ -17,7 +17,6 @@
   ;; @see: http://d.hatena.ne.jp/grandVin/20090716/1247725452
   ;; @see: http://emacs.g.hatena.ne.jp/k1LoW/20090713/1247496970
   ;; @see: http://d.hatena.ne.jp/rubikitch/20101031/splitroot
-  ;; (auto-install-from-url "http://nschum.de/src/emacs/split-root/split-root.el")
   (require 'split-root)
   (defvar anything-compilation-window-height-percent 50.0)
   (defun anything-compilation-window-root (buf)
