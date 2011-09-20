@@ -8,6 +8,7 @@
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
 (global-set-key (kbd "C-\\") nil)
 (global-set-key (kbd "C-x r b") 'anything-bookmarks)
+(global-set-key (kbd "C-d") 'delete-backward-char)
 
 (progn
   (require 'cc-cmds)
@@ -88,4 +89,4 @@
   (global-set-key (kbd "C-x C-d") 'nav-toggle))
 
 ;;; anything
-(global-set-key (kbd "M-x") 'anything-M-x)
+(global-set-key (kbd "M-x") 'anything-execute-extended-command)
