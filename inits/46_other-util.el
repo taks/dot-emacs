@@ -158,14 +158,6 @@
          (insert (format format first))
          (yank)
          (setq first (+ first incr)))))
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; windows.el + revive.el
-(defvar win:switch-prefix "\C-z")
-(require 'windows)
-(setq win:use-frame nil)
-(win:startup-with-window)
-(define-key ctl-x-map "C" 'see-you-again)
-(define-key global-map "\C-c\C-r" 'resume-windows)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Sunrise Commander
