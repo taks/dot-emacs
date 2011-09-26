@@ -26,10 +26,7 @@
   ;; @see: http://d.hatena.ne.jp/khiker/20110508/windowsel
   (setq win:use-frame nil
         win:quick-selection nil
-        ;; use a-z as prefix.
-        win:base-key ?`
-        win:switch-prefix "\C-z"
-        win:max-configs 27)
+        win:switch-prefix "\C-z")
   (require 'windows)
   (win:startup-with-window)
   (define-key win:switch-map ";" 'win-switch-menu)
