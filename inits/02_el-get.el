@@ -93,6 +93,10 @@
                :build `(,(concat "make --directory=lisp all EMACS=" el-get-emacs))
                :load-path ("lisp")
                :features ess-site)
+        (:name ess-tracebug :type http :url "https://ess-tracebug.googlecode.com/svn/trunk/ess-tracebug.el"
+               :features ess-tracebug
+               :after (lambda ()
+                        (add-hook 'ess-post-run-hook 'ess-tracebug t)))
         (:name auto-complete-acr :type git
                :url "https://github.com/taks/auto-complete-acr.el.git"
                :features (auto-complete-acr ess-R-object-popup))
