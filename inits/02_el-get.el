@@ -152,6 +152,13 @@
         (:name anything-hg-project :type http
                :url "https://gist.github.com/raw/810580/76b28aba497acf7fed873399a9997d4d382c0de1/anything-hg-project.el"
                :features anything-hg-project)
+
+        (:name scratch-log :type git
+               :url "https://github.com/wakaran/scratch-log.git"
+               :features scratch-log)
+        (:name slime-scratch-log :type git
+               :url "https://github.com/wakaran/slime-scratch-log.git"
+               :features slime-scratch-log)
         ))
 
 (el-get 'sync)
