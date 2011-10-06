@@ -4,11 +4,15 @@
 (setq inferior-lisp-program "~/opt/ccl/lx86cl")
 (require 'slime)
 (setq slime-net-coding-system 'utf-8-unix)
-(slime-setup '(slime-repl slime-fancy slime-banner))
+(slime-setup '(slime-repl slime-fancy slime-banner slime-scratch))
 (add-hook 'slime-mode-hook
           (lambda ()
             (require 'ac-slime)
             (set-up-slime-ac)))
+(add-hook 'after-init-hook
+          '(lambda ()
+             (slime-scratch)
+             (define-key slime-scratch-mode-map (kbd "C-j") nil)))
 
 ;; pop-win の設定
 (push '("*slime-apropos*") popwin:special-display-config)
