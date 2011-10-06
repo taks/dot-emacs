@@ -14,6 +14,10 @@
              (slime-scratch)
              (define-key slime-scratch-mode-map (kbd "C-j") nil)))
 
+;;; 履歴の設定
+(setq slime-repl-history-remove-duplicates t)
+(setq slime-repl-history-trim-whitespaces t)
+
 ;; pop-win の設定
 (push '("*slime-apropos*") popwin:special-display-config)
 (push '("*slime-macroexpansion*") popwin:special-display-config)
