@@ -46,3 +46,9 @@
 (define-key dired-mode-map "\C-m" 'dired-find-alternate-file)
 (define-key dired-mode-map (kbd "^")
     (lambda () (interactive) (find-alternate-file "..")))
+
+;; カーソルの行に色をつける
+(require 'hl-line)
+(add-hook 'dired-mode-hook
+          '(lambda ()
+             (hl-line-mode t)))

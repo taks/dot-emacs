@@ -38,3 +38,9 @@
 (add-hook 'ibuffer-hook
           '(lambda ()
              (local-unset-key (kbd "C-k"))))
+
+;; カーソルの行に色をつける
+(require 'hl-line)
+(add-hook 'ibuffer-mode-hook
+          '(lambda ()
+             (hl-line-mode t)))
