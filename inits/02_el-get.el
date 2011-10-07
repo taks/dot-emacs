@@ -161,7 +161,7 @@
                :features slime-scratch-log)
         ))
 
-(el-get 'sync)
+(el-get 'sync (mapcar 'el-get-source-name el-get-sources))
 
 (provide 'init-el-get.el)
 ;;; init-el-get.el ends here
