@@ -13,6 +13,7 @@
           '(lambda ()
              (slime-scratch)
              (define-key slime-scratch-mode-map (kbd "C-j") nil)))
+(define-key slime-mode-map (kbd "M-z") 'slime-selector)
 
 ;;; 履歴の設定
 (setq slime-repl-history-remove-duplicates t)
