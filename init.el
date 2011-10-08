@@ -74,7 +74,8 @@
 (progn
   (require 'init-loader)
   ;; オブション"--debug-init"が指定された場合にはログバッファを表示
-  (setq init-loader-show-log-after-init debug-on-error)
+  ;; それ以外は，エラーが発生したらログバッファを表示
+  (setq init-loader-show-log-after-init (or debug-on-error 'if-error))
   (init-loader-load))
 
 ;; サーバーの起動

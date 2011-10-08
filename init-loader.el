@@ -33,7 +33,8 @@
 ;; 3. carbon-emacsの場合, carbon-emacs から始まる名前のファイル. e.x, "carbon-emacs-config.el" "carbon-emacs-migemo.el"
 ;; 4. windowシステム以外の場合(terminal), nw から始まる名前のファイル e.x, "nw-config.el"
 
-;; ファイルロード後,変数`init-loader-show-log-after-init'の値がnon-nilなら,ログバッファを表示する関数を`after-init-hook'へ追加する.
+;; ファイルロード後,変数`init-loader-show-log-after-init'の値がtなら,ログバッファを表示する関数を`after-init-hook'へ追加する.
+;; また，'if-error ならば，エラー発生時のみ表示する．
 ;; ログの表示は, M-x init-loader-show-log でも可能.
 
 (eval-when-compile (require 'cl))
@@ -50,8 +51,8 @@
   :group 'init-loader)
 
 (defcustom init-loader-show-log-after-init t
-  "non-nilだと起動時にログバッファを表示する"
-  :type 'boolean
+  "tだと起動時にログバッファを表示する，'if-errorだとエラー発生時のみ表示"
+  :type symbol
   :group 'init-loader)
 
 (defcustom init-loader-default-regexp "\\(?:^[[:digit:]]\\{2\\}\\)"
@@ -100,8 +101,10 @@ e.x, 00_hoge.el, 01_huga.el ... 99_keybind.el"
     (and (null window-system)
          (init-loader-re-load init-loader-nw-regexp init-dir))
 
-    (when init-loader-show-log-after-init
-      (add-hook  'after-init-hook 'init-loader-show-log))))
+    (when (or (eql init-loader-show-log-after-init t)
+              (and (eql init-loader-show-log-after-init 'if-error)
+                   (not (eql (init-loader-error-log) ""))))
+      (add-hook 'after-init-hook 'init-loader-show-log))))
 
 (defun init-loader-follow-symlink (dir)
   (cond ((file-symlink-p dir)
