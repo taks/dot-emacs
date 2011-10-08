@@ -52,7 +52,7 @@
 
 (defcustom init-loader-show-log-after-init t
   "tだと起動時にログバッファを表示する，'if-errorだとエラー発生時のみ表示"
-  :type symbol
+  :type 'symbol
   :group 'init-loader)
 
 (defcustom init-loader-default-regexp "\\(?:^[[:digit:]]\\{2\\}\\)"
