@@ -21,6 +21,14 @@
              (local-unset-key (kbd "C-k"))
              (local-unset-key (kbd "C-j"))))
 
+;;; plantuml
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((plantuml . t)))
+(setq org-plantuml-jar-path
+      (expand-file-name "~/local/plantuml/plantuml.jar"))
+
+
 ;; "latex" ではなく tex-command変数 を使うために関数を上書き
 ;; ( org.elの 12750行 で宣言されていた )
 ;; This function borrows from Ganesh Swami's latex2png.el
