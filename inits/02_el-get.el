@@ -63,6 +63,7 @@
                                   '(lambda ()
                                      (c-toggle-auto-state)))))
         lua-mode
+        tuareg-mode
         yaml-mode
         quack
         slime
