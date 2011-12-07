@@ -29,3 +29,13 @@
              (define-key reftex-mode-map
                (concat YaTeX-prefix "<") 'YaTeX-uncomment-region)))
 
+
+;;; yatex-mode + noweb-minor-mode
+(defun Rnw-mode ()
+  "Major mode for editing Sweave(R) source.
+See `noweb-mode' and `R-mode' for more help."
+  (interactive)
+  (require 'ess-noweb)
+  (noweb-mode 1)
+  (noweb-set-doc-mode 'yatex-mode)
+  (noweb-set-code-mode 'R-mode))
