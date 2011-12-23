@@ -44,7 +44,9 @@
 ;; zencoding
 (require 'zencoding-mode)
 (add-hook 'sgml-mode-hook 'zencoding-mode)
-(define-key zencoding-mode-keymap (kbd "C-c C-j") 'zencoding-expand-line)
+(add-hook 'nxml-mode 'zencoding-mode)
+(define-key zencoding-mode-keymap (kbd "C-M-j") 'zencoding-expand-line)
+(define-key zencoding-mode-keymap (kbd "C-j") nil)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; bibtex
 (modify-coding-system-alist 'file "\\.bib\\'" 'euc-jp)
