@@ -83,6 +83,7 @@
         rhtml-mode
         zencoding-mode
         moz-repl
+        scss-mode
         ;; csharp-mode
         (:name yatex :type hg :url "http://www.yatex.org/hgrepos/yatex")
         (:name matlab-emacs :type git :url "https://github.com/ruediger/matlab-emacs.git"
