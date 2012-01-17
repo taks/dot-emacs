@@ -127,3 +127,7 @@
                     :foreground "chocolate4"
                     :background "white" :weight 'extra-bold
                     :underline t :inherit nil)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+;; js2-mode
+(setq c-basic-offset 2)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))

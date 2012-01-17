@@ -84,6 +84,10 @@
         zencoding-mode
         moz-repl
         scss-mode
+        (:name js2-mode-mooz :type git :url "https://github.com/mooz/js2-mode.git"
+               :compile "js2-mode.el"
+               :post-init (lambda ()
+                            (autoload 'js2-mode "js2-mode" nil t)))
         ;; csharp-mode
         (:name yatex :type hg :url "http://www.yatex.org/hgrepos/yatex")
         (:name matlab-emacs :type git :url "https://github.com/ruediger/matlab-emacs.git"
