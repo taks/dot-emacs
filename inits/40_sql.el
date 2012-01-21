@@ -27,4 +27,5 @@
               (setq show-trailing-whitespace nil)
               (setq comint-input-autoexpand t)
               (setq comint-output-filter-functions
-                    'comint-truncate-buffer)))
+                    'comint-truncate-buffer)
+              (define-key sql-interactive-mode-map (kbd "C-j") nil)))
