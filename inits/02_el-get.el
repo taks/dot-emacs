@@ -163,6 +163,12 @@
                :url "https://gist.github.com/raw/810580/76b28aba497acf7fed873399a9997d4d382c0de1/anything-hg-project.el"
                :features anything-hg-project)
 
+        (:name jaunte :type git
+               :url "https://github.com/kawaguchi/jaunte.el.git"
+               :post-init (lambda ()
+                            (require 'jaunte)
+                            (global-set-key (kbd "C-c SPC") 'jaunte)))
+
         (:name scratch-log :type git
                :url "https://github.com/wakaran/scratch-log.git"
                :features scratch-log)
