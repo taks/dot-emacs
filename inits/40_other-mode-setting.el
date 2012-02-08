@@ -115,6 +115,7 @@
 (setq css-indent-offset 2) ;; インデント量
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; diff-mode
+(require 'diff-mode)
 (set-face-attribute 'diff-added-face nil
                     :background nil :foreground "green"
                     :weight 'normal)
