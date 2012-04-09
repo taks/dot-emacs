@@ -36,6 +36,8 @@
   (global-set-key (kbd "C-l") 'forward-char)
   (global-set-key (kbd "M-h") 'backward-word)
   (global-set-key (kbd "M-l") 'forward-word)
+  (global-set-key (kbd "M-j") 'next-line)
+  (global-set-key (kbd "M-k") 'previous-line)
   (global-unset-key (kbd "C-f"))
   (global-unset-key (kbd "C-b"))
   (global-unset-key (kbd "C-p"))
