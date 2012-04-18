@@ -83,6 +83,7 @@ and source-file directory for your debugger." t)
 ;; @see: http://rinari.rubyforge.org/rhtml_002dMode.html#rhtml_002dMode
 (add-to-list 'load-path "~/.emacs.d/el-get/rhtml-mode")
 (require 'rhtml-mode)
+(add-to-list 'auto-mode-alist '("\\.erb$" . rhtml-mode))
 (add-hook 'rhtml-mode-hook
           (lambda () (rinari-launch)))
 
