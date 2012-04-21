@@ -8,6 +8,7 @@
       '(el-get
         anything
         org-mode
+        markdown-mode
         (:name split-root :type http
                :url "http://nschum.de/src/emacs/split-root/split-root.el")
         yasnippet
