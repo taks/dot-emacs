@@ -95,10 +95,10 @@
                :build ("make")
                :load-path ("."))
         (:name my-ess
-               :type svn
-               :url "https://svn.r-project.org/ESS/trunk/"
+               :type git
+               :url "https://github.com/emacsmirror/ess.git"
                :info "doc/info/"
-               :build `(,(concat "make --directory=lisp all EMACS=" el-get-emacs))
+               :build `(,(concat "make clean && make SVN-REVISION && make --directory=etc all && make --directory=lisp all EMACS=" el-get-emacs))
                :load-path ("lisp")
                :features ess-site)
         (:name ess-tracebug :type http :url "https://ess-tracebug.googlecode.com/svn/trunk/ess-tracebug.el"
