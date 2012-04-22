@@ -100,10 +100,12 @@
                :info "doc/info/"
                :build `(,(concat "make clean && make SVN-REVISION && make --directory=etc all && make --directory=lisp all EMACS=" el-get-emacs))
                :load-path ("lisp")
-               :features ess-site)
+               :after (lambda ()
+                        (autoload 'R-mode "ess-site" "Emacs Speaks Statistics mode" t)
+                        (autoload 'R "ess-site" "start R" t)
+                        (add-to-list 'auto-mode-alist '("\\.[rR]$" . R-mode))))
         (:name auto-complete-acr :type git
-               :url "https://github.com/taks/auto-complete-acr.el.git"
-               :features (auto-complete-acr ess-R-object-popup))
+               :url "https://github.com/taks/auto-complete-acr.el.git")
 
         (:name ajc-java-complete :type git :url "https://github.com/jixiuf/ajc-java-complete.git"
                :build ("javac Tags.java" "java Tags"))
