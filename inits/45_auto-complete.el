@@ -20,6 +20,12 @@
 (define-key ac-completing-map (kbd "C-j") 'ac-next)
 (define-key ac-completing-map (kbd "C-k") 'ac-previous)
 (define-key ac-completing-map (kbd "<C-tab>") 'ac-stop)
+;; 補完候補が表示されている時に M-h を押すと即座にドキュメントが表示されるようにする
+;; (define-key ac-completing-map (kbd "C-h") (lambda () (interactive) (ac-quick-help t))) だとダメ
+(defun ac-quick-help-force ()
+  (interactive)
+  (ac-quick-help t))
+(define-key ac-completing-map (kbd "C-h") 'ac-quick-help-force)
 
 ;; 補完対象のモードを追加
 (when (boundp 'ac-modes)
