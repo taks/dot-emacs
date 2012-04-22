@@ -95,7 +95,7 @@
                :compile "js2-mode.el"
                :post-init (lambda ()
                             (autoload 'js2-mode "js2-mode" nil t)))
-        ;; csharp-mode
+
         (:name yatex :type hg :url "http://www.yatex.org/hgrepos/yatex")
         (:name matlab-emacs :type git :url "https://github.com/ruediger/matlab-emacs.git"
                :build ("make")
@@ -160,13 +160,6 @@
                :url "https://gist.github.com/raw/741587/3c47bd2cb0350ae40a44bfc075ad93f41524f32c/anything-git-project.el"
                :load "anything-git-project.el")
         magit
-        (:name monky :type git
-               :url "https://github.com/ananthakumaran/monky.git"
-               :autoloads t)
-        ;;; anything-hg-project
-        (:name anything-hg-project :type http
-               :url "https://gist.github.com/raw/810580/76b28aba497acf7fed873399a9997d4d382c0de1/anything-hg-project.el"
-               :features anything-hg-project)
 
         (:name jaunte :type git
                :url "https://github.com/kawaguchi/jaunte.el.git"
