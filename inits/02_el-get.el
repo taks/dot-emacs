@@ -1,8 +1,14 @@
+
 ;;; init-el-get.el ---
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-(when (not (require 'el-get nil t))
-  (error "Please bootstrap el-get using the instructions here: http://github.com/dimitri/el-get/, then restart Emacs"))
+(unless (require 'el-get nil t)
+  ;; el-get がインストールされていなければ，インストールを行う
+  (url-retrieve
+   "https://raw.github.com/dimitri/el-get/master/el-get-install.el"
+   (lambda (s)
+     (end-of-buffer)
+     (eval-print-last-sexp))))
 
 (setq el-get-sources
       '(el-get
