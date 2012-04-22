@@ -132,3 +132,10 @@
 ;; js2-mode
 (setq c-basic-offset 2)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+;; markdowm-mode
+;; 折りたたみ
+(add-hook 'markdown-mode-hook
+          (lambda()
+            (define-key markdown-mode-map (kbd "C-i") 'markdown-cycle)
+            (hide-sublevels 2)))
