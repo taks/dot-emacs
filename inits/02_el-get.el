@@ -170,9 +170,6 @@
         (:name scratch-log :type git
                :url "https://github.com/wakaran/scratch-log.git"
                :features scratch-log)
-        (:name slime-scratch-log :type git
-               :url "https://github.com/wakaran/slime-scratch-log.git"
-               :features slime-scratch-log)
         ))
 
 (el-get 'sync (mapcar 'el-get-source-name el-get-sources))

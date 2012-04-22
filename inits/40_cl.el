@@ -9,10 +9,7 @@
           (lambda ()
             (require 'ac-slime)
             (set-up-slime-ac)))
-(add-hook 'after-init-hook
-          '(lambda ()
-             (slime-scratch)
-             (define-key slime-scratch-mode-map (kbd "C-j") nil)))
+(define-key slime-scratch-mode-map (kbd "C-j") nil)
 (define-key slime-mode-map (kbd "M-z") 'slime-selector)
 
 ;;; 履歴の設定
