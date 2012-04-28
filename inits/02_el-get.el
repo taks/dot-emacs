@@ -173,8 +173,7 @@
         ;; @see: http://emacs.g.hatena.ne.jp/k1LoW/20110107/1294408979
         ;; @see: https://github.com/k1LoW/anything-replace-string
         (:name anything-replace-string :type git
-               :url "https://github.com/k1LoW/anything-replace-string.git"
-               :features anything-replace-string)
+               :url "https://github.com/k1LoW/anything-replace-string.git")
 
         ;;; anything-git-project
         ;; @see: http://d.hatena.ne.jp/yaotti/20101216/1292500323
