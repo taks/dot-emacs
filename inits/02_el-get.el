@@ -17,7 +17,29 @@
         markdown-mode
         (:name split-root :type http
                :url "http://nschum.de/src/emacs/split-root/split-root.el")
-        yasnippet
+
+        (:name yasnippet-github
+               :type git
+               :url "https://github.com/capitaomorte/yasnippet.git"
+               :features "yasnippet"
+               :pre-init (unless (or (boundp 'yas/snippet-dirs)
+                                     (get 'yas/snippet-dirs 'customized-value))
+                           (setq yas/snippet-dirs
+                                 (list (concat el-get-dir
+                                               (file-name-as-directory "yasnippet")
+                                               "snippets"))))
+               :post-init (put 'yas/snippet-dirs 'standard-value
+                               ;; as cus-edit.el specifies, "a cons-cell whose
+                               ;; car evaluates to the standard value"
+                               (list
+                                (list
+                                 'quote
+                                 (list (concat el-get-dir
+                                               (file-name-as-directory "yasnippet")
+                                               "snippets")))))
+               :compile nil
+               :submodule nil)
+
         (:name anything-c-yasnippet :type http
                :url "http://svn.coderepos.org/share/lang/elisp/anything-c-yasnippet/anything-c-yasnippet.el" )
 
