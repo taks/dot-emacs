@@ -12,3 +12,5 @@
 !/inits/
 !/elisp/
 !/snippets/
+
+/bin/ocp*

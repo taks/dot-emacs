@@ -92,7 +92,12 @@
                                   '(lambda ()
                                      (c-toggle-auto-state)))))
         lua-mode
-        tuareg-mode
+
+        (:name typerex :type git :url "https://github.com/OCamlPro/typerex.git"
+               :build `(,(concat "./configure --disable-version-check --disable-auto-complete"
+                                 " --bindir=" (expand-file-name "~/.emacs.d/bin") " --with-lispdir=" (expand-file-name "~/.emacs.d/el-get/typerex/sitelisp")
+                                 " && make && make install")))
+
         yaml-mode
         quack
         slime
