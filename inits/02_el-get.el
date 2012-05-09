@@ -52,6 +52,7 @@
                             (setq color-theme-is-global t)))
 
         auto-complete
+        (:name fuzzy :type git :url "https://github.com/m2ym/fuzzy-el.git")
 
         (:name shell-command :type http :url "http://www.namazu.org/~tsuchiya/elisp/shell-command.el")
         multi-term
@@ -93,6 +94,7 @@
                                      (c-toggle-auto-state)))))
         lua-mode
 
+        tuareg-mode
         (:name typerex :type git :url "https://github.com/OCamlPro/typerex.git"
                :build `(,(concat "./configure --disable-version-check --disable-auto-complete"
                                  " --bindir=" (expand-file-name "~/.emacs.d/bin") " --with-lispdir=" (expand-file-name "~/.emacs.d/el-get/typerex/sitelisp")

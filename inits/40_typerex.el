@@ -35,8 +35,7 @@
 
 ;;;; Auto completion (experimental)
 ;;;; Don't use M-x invert-face default with auto-complete! (emacs -r is OK)
-;;(add-to-list 'load-path "~/.emacs.d/el-get/typerex/sitelisp/auto-complete-mode")
-;;(setq ocp-auto-complete t)
+(setq ocp-auto-complete t)
 
 ;;;; Using <`> to complete whatever the context, and <C-`> for `
 ;;(setq auto-complete-keys 'ac-keys-backquote-backslash)
