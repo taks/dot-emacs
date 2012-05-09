@@ -142,6 +142,8 @@
         (:name auto-complete-acr :type git
                :url "https://github.com/taks/auto-complete-acr.el.git")
 
+        imaxima
+
         (:name ajc-java-complete :type git :url "https://github.com/jixiuf/ajc-java-complete.git"
                :build ("javac Tags.java" "java Tags"))
 
