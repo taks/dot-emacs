@@ -9,6 +9,7 @@
 (global-set-key (kbd "C-\\") nil)
 (global-set-key (kbd "C-x r b") 'anything-bookmarks)
 (global-set-key (kbd "C-d") 'delete-backward-char)
+(global-set-key (kbd "C-x f") 'anything-for-files)
 
 (progn
   (require 'cc-cmds)
