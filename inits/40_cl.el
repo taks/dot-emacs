@@ -1,16 +1,17 @@
 ;;; 40_cl.el
 ;; slime の設定
+(require 'slime-autoloads)
+(slime-setup '(slime-repl slime-fancy slime-banner slime-scratch))
+
 (set-language-environment "utf-8")
 (setq inferior-lisp-program "~/opt/ccl/lx86cl")
-(require 'slime)
 (setq slime-net-coding-system 'utf-8-unix)
-(slime-setup '(slime-repl slime-fancy slime-banner slime-scratch))
 (add-hook 'slime-mode-hook
           (lambda ()
             (require 'ac-slime)
-            (set-up-slime-ac)))
-(define-key slime-scratch-mode-map (kbd "C-j") nil)
-(define-key slime-mode-map (kbd "M-z") 'slime-selector)
+            (set-up-slime-ac)
+            (define-key slime-scratch-mode-map (kbd "C-j") nil)
+            (define-key slime-mode-map (kbd "M-z") 'slime-selector)))
 
 ;;; 履歴の設定
 (setq slime-repl-history-remove-duplicates t)
