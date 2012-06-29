@@ -139,3 +139,5 @@
           (lambda()
             (define-key markdown-mode-map (kbd "C-i") 'markdown-cycle)
             (hide-sublevels 2)))
+(add-to-list 'auto-mode-alist
+             '("\\.[Rr]md$" . gfm-mode))
