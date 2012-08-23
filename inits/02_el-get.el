@@ -109,6 +109,12 @@
         geiser
         slime
         ac-slime
+        (:name rainbow-delimiters-github
+               :website "https://github.com/jlr/rainbow-delimiters#readme"
+               :description "Color nested parentheses, brackets, and braces according to their depth."
+               :type git
+               :url "https://github.com/jlr/rainbow-delimiters.git"
+               :features rainbow-delimiters)
         (:name cl-indent-patches :type git :url "https://github.com/m2ym/cl-indent-patches-el.git")
         (:name cl-test-more :type http
                :url "https://raw.github.com/netpyoung/emacs-config/master/cl-test-more/cl-test-more.el"

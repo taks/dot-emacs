@@ -1,5 +1,7 @@
 ;;; 40_scheme.el
 
+(add-hook 'scheme-mode-hook 'rainbow-delimiters-mode)
+
 ;; scheme-complete.el を auto-complete.el で使う
 ;; @see: http://d.hatena.ne.jp/kobapan/20091205/1259972925
 ;; @see: http://synthcode.com/emacs/
