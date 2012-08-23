@@ -145,4 +145,4 @@
 ;; pure-mode
 (add-hook 'pure-mode-hook
           (lambda ()
-            (setq pure-libdir pure-prog)))
+            (setq pure-libdir (replace-regexp-in-string "/bin/" "/lib/" pure-prog))))
