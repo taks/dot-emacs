@@ -106,7 +106,7 @@
                                  " && make && make install")))
 
         yaml-mode
-        quack
+        geiser
         slime
         ac-slime
         (:name cl-indent-patches :type git :url "https://github.com/m2ym/cl-indent-patches-el.git")
