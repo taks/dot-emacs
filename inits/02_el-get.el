@@ -92,6 +92,11 @@
                         (add-hook 'd-mode-hook
                                   '(lambda ()
                                      (c-toggle-auto-state)))))
+        (:name pure-mode :type http :url "https://pure-lang.googlecode.com/hg/pure/etc/pure-mode.el.in"
+               :build ("mv pure-mode.el.in pure-mode.el")
+               :after (lambda ()
+                        (autoload 'pure-mode "pure-mode" "" t)
+                        (add-to-list 'auto-mode-alist '("\\.pure\\(rc\\)?$" . pure-mode))))
         lua-mode
 
         tuareg-mode

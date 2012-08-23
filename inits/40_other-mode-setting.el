@@ -141,3 +141,8 @@
             (hide-sublevels 2)))
 (add-to-list 'auto-mode-alist
              '("\\.[Rr]md$" . gfm-mode))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;x
+;; pure-mode
+(add-hook 'pure-mode-hook
+          (lambda ()
+            (setq pure-libdir pure-prog)))
