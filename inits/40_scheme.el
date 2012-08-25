@@ -22,3 +22,5 @@
   "Apply customisations when Scheme mode is launched."
   (auto-complete-mode t)
   (init-racket-setup-ac-sources))
+
+(add-hook 'scheme-mode-hook 'init-racket-mode-hook)
