@@ -2,18 +2,22 @@
 
 (add-hook 'scheme-mode-hook 'rainbow-delimiters-mode)
 
-;; scheme-complete.el を auto-complete.el で使う
-;; @see: http://d.hatena.ne.jp/kobapan/20091205/1259972925
-;; @see: http://synthcode.com/emacs/
-(progn
-  (defvar ac-source-scheme
-    '((candidates
-       . (lambda ()
-           (require 'scheme-complete)
-           (all-completions ac-target (car (scheme-current-env))))))
-    "Source for scheme keywords.")
-  (add-hook 'scheme-mode-hook
-            '(lambda ()
-               (make-local-variable 'ac-sources)
-               (setq ac-sources (append ac-sources '(ac-source-scheme)))))
-  )
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; auto-complete
+;; @see: https://github.com/sonelliot/sonelliot-dotemacs/blob/master/config/init-racket.el
+(defun ac-racket-symbols ()
+  "Retrieve completion candidates for the current `auto-complete' prefix"
+  (geiser-completion--symbol-list ac-prefix))
+
+(defvar ac-source-racket
+  '((candidates . ac-racket-symbols))
+  "Source of completion candidates for Racket")
+
+(defun init-racket-setup-ac-sources ()
+  "Setup the `auto-complete' sources"
+  (add-to-list 'ac-sources 'ac-source-racket))
+
+(defun init-racket-mode-hook ()
+  "Apply customisations when Scheme mode is launched."
+  (auto-complete-mode t)
+  (init-racket-setup-ac-sources))
