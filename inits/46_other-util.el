@@ -188,3 +188,6 @@
 ;;; magit
 (autoload 'magit-status "magit" nil t)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; paredit-mode
+(define-key paredit-mode-map (kbd "C-j") nil)
+(define-key paredit-mode-map (kbd "C-k") nil)

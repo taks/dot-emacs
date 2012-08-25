@@ -1,5 +1,6 @@
 ;;; 40_scheme.el
 
+(add-hook 'scheme-mode-hook 'enable-paredit-mode)
 (add-hook 'scheme-mode-hook 'rainbow-delimiters-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

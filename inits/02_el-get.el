@@ -109,6 +109,7 @@
         geiser
         slime
         ac-slime
+        paredit
         (:name rainbow-delimiters-github
                :website "https://github.com/jlr/rainbow-delimiters#readme"
                :description "Color nested parentheses, brackets, and braces according to their depth."
