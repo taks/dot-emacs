@@ -1,0 +1,2 @@
+(:name auto-complete-acr :type git
+       :url "https://github.com/taks/auto-complete-acr.el.git")

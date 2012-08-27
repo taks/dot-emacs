@@ -1,0 +1,5 @@
+(:name jaunte :type git
+       :url "https://github.com/kawaguchi/jaunte.el.git"
+       :post-init (lambda ()
+                    (require 'jaunte)
+                    (global-set-key (kbd "C-c SPC") 'jaunte)))

@@ -1,0 +1,6 @@
+;; @see: http://d.hatena.ne.jp/m2ym/20110120/1295524932
+(:name popwin :type git :url "https://github.com/m2ym/popwin-el.git"
+       :load-path ("." "misc")
+       :features popwin
+       :after (lambda ()
+                (setq display-buffer-function 'popwin:display-buffer)))

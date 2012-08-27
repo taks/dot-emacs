@@ -1,0 +1,10 @@
+(:name ess-github
+       :type git
+       :url "https://github.com/emacsmirror/ess.git"
+       :info "doc/info/"
+       :build `(,(concat "make clean && make SVN-REVISION && make --directory=etc all && make --directory=lisp all EMACS=" el-get-emacs))
+       :load-path ("lisp")
+       :after (lambda ()
+                (autoload 'R-mode "ess-site" "Emacs Speaks Statistics mode" t)
+                (autoload 'R "ess-site" "start R" t)
+                (add-to-list 'auto-mode-alist '("\\.[rR]$" . R-mode))))
