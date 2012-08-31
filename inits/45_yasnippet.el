@@ -7,7 +7,6 @@
 (setq anything-c-yas-space-match-any-greedy t)
 ;; C-c yで起動
 (global-set-key (kbd "C-c y") 'anything-c-yas-complete)
-(yas/initialize)
 
 (add-to-list 'yas/root-directory "~/.emacs.d/snippets")
 (if (listp yas/root-directory)
