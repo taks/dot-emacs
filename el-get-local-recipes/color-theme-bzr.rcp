@@ -2,6 +2,9 @@
        :url "http://bzr.savannah.nongnu.org/r/color-theme/trunk"
        :load "color-theme.el"
        :features "color-theme"
-       :post-init (lambda ()
+       :post-init (progn
                     (color-theme-initialize)
                     (setq color-theme-is-global t)))
+
+
+

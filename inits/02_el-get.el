@@ -1,4 +1,4 @@
-;;; init-el-get.el ---
+;;; 02_el-get.el ---
 
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 (unless (require 'el-get nil t)
@@ -12,20 +12,20 @@
 (add-to-list 'el-get-recipe-path
              "~/.emacs.d/el-get-local-recipes")
 
-(setq el-get-sources
+(setq my-packages
       '(el-get
         anything
         org-mode
         markdown-mode
         split-root
 
-        yasnippet-github
+        yasnippet
         anything-c-yasnippet
 
         color-theme-bzr
 
-        auto-complete
-        fuzzy
+        auto-complete-cx4a
+        ;; fuzzy
 
         shell-command
         multi-term
@@ -53,14 +53,14 @@
         yaml-mode
         geiser
         slime
-        ;; ac-slime
+        ac-slime
         paredit
         rainbow-delimiters-github
-        cl-indent-patches
+        ;; cl-indent-patches
 
         cl-test-more
 
-        rinari-taks
+        ;; rinari-taks
         rhtml-mode
         zencoding-mode
         moz-repl
@@ -68,10 +68,9 @@
         js2-mode-mooz
 
         yatex
-        matlab-emacs
+        ;; matlab-emacs
 
-        ess-github
-
+        ess
         auto-complete-acr
 
         imaxima
@@ -109,9 +108,8 @@
 
         jaunte
 
-        scratch-log))
+        ;;scratch-log
+        ))
 
-(el-get 'sync (mapcar 'el-get-source-name el-get-sources))
-
-(provide 'init-el-get.el)
-;;; init-el-get.el ends here
+(el-get 'sync my-packages)
+;;; 02_el-get.el ends here

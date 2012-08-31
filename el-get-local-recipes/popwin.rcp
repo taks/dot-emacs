@@ -2,5 +2,4 @@
 (:name popwin :type git :url "https://github.com/m2ym/popwin-el.git"
        :load-path ("." "misc")
        :features popwin
-       :after (lambda ()
-                (setq display-buffer-function 'popwin:display-buffer)))
+       :post-init (setq display-buffer-function 'popwin:display-buffer))
