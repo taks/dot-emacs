@@ -76,7 +76,7 @@
         imaxima
         sage
 
-        ajc-java-complete
+        ;; ajc-java-complete
 
         smartchr
 
