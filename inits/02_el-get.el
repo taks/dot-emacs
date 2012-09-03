@@ -24,7 +24,7 @@
 
         color-theme-bzr
 
-        auto-complete-cx4a
+        auto-complete-github
         ;; fuzzy
 
         shell-command
