@@ -68,7 +68,7 @@
         js2-mode-mooz
 
         yatex
-        ;; matlab-emacs
+        matlab-emacs
 
         ess
         auto-complete-acr
