@@ -15,4 +15,5 @@
 (add-hook 'matlab-mode-hook
           '(lambda ()
              (local-unset-key (kbd "C-j"))
-             (local-unset-key (kbd "C-h"))))
+             (local-unset-key (kbd "C-h"))
+             (local-unset-key (kbd "M-;"))))
