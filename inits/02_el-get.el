@@ -91,6 +91,7 @@
         sudo-ext
 
         hideshowvis
+        folding-my
 
         shell-pop
 

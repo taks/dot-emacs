@@ -231,3 +231,8 @@
 ;;; paredit-mode
 (define-key paredit-mode-map (kbd "C-j") nil)
 (define-key paredit-mode-map (kbd "C-k") nil)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; folding
+(setq folding-mode-prefix-key "\C-c")
+(require 'folding)
+(define-key folding-mode-map (kbd "M-t") 'folding-toggle-show-hide)
