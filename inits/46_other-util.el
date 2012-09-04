@@ -71,7 +71,8 @@
               (error t))
             (hs-show-all))
       (toggle-selective-display column)))
-  (global-set-key (kbd "M-+") 'toggle-hiding))
+  (eval-after-load "hideshow"
+    '(define-key hs-minor-mode-map (kbd "M-+") 'toggle-hiding)))
 
 (when (locate-library "hideshowvis")
   ;; hideshowvis
