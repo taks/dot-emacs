@@ -93,3 +93,5 @@
 
 ;;; anything
 (global-set-key (kbd "M-x") 'anything-execute-extended-command)
+
+(global-set-key (kbd "M-t") nil)
