@@ -74,7 +74,7 @@
         auto-complete-acr
 
         imaxima
-        sage
+        sage-mode
 
         ;; ajc-java-complete
 
