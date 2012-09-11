@@ -1,2 +1,0 @@
-(:name sage :type hg :url "https://bitbucket.org/ncalexan/sage-mode"
-       :load-path ("emacs"))
