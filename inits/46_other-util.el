@@ -128,6 +128,37 @@
 
   (setq hs-set-up-overlay 'display-code-line-counts))
 
+;;; tab binding for hs-minor mode
+;; called once on a line that contains a hidden block, shows the
+;; block; otherwise calls the default action of TAB; called twice on a
+;; line that does not contain a hidden block, hide the block from the
+;; current position of the cursor
+(defun tab-hs-hide ( &optional arg )
+  (interactive "P")
+  (let ((sl (save-excursion (move-beginning-of-line nil) (point)))
+        (el (save-excursion (move-end-of-line nil) (point)))
+        obj)
+    (catch 'stop
+      (dotimes (i (- el sl))
+        (mapc
+         (lambda (overlay)
+           (when (eq 'hs (overlay-get overlay 'invisible))
+             (setq obj t)))
+         (overlays-at (+ i sl)))
+        (and obj (throw 'stop 'stop))))
+    (cond ((and (null obj)
+                (eq last-command this-command))
+           (hs-hide-block))
+          (obj
+           (progn
+             (move-beginning-of-line nil)
+             (hs-show-block)))
+          (t
+           (save-excursion
+             (funcall (lookup-key (current-global-map) (kbd "^I")) arg))))))
+(eval-after-load "hideshow"
+  '(define-key hs-minor-mode-map [tab] 'tab-hs-hide))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; emacs 内でログファイルを tail -f する設定
 ;; @see: http://d.hatena.ne.jp/kitokitoki/20101211/p1
