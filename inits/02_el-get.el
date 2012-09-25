@@ -71,7 +71,6 @@
         matlab-emacs
 
         ess-github
-        auto-complete-acr
 
         imaxima
         sage-mode
