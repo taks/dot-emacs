@@ -70,7 +70,7 @@
         yatex
         matlab-emacs
 
-        ess
+        ess-github
         auto-complete-acr
 
         imaxima
