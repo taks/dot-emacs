@@ -1,10 +1,11 @@
 (:name ess-github
-       :type git
-       :url "https://github.com/emacsmirror/ess.git"
+       :description "Emacs Speaks Statistics: statistical programming within Emacs"
+       :type github
+       :pkgname "emacs-ess/ESS"
        :info "doc/info/"
-       :build `(,(concat "make clean && make SVN-REVISION && make --directory=etc all && make --directory=lisp all EMACS=" el-get-emacs))
+       :build `,(mapcar
+                 (lambda (target)
+                   (concat "make " target " EMACS=" el-get-emacs))
+                 '("clean" "--directory=etc all" "--directory=lisp all"))
        :load-path ("lisp")
-       :after (lambda ()
-                (autoload 'R-mode "ess-site" "Emacs Speaks Statistics mode" t)
-                (autoload 'R "ess-site" "start R" t)
-                (add-to-list 'auto-mode-alist '("\\.[rR]$" . R-mode))))
+       :features ess-site)
