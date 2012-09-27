@@ -3,4 +3,7 @@
        :description "The most intelligent auto-completion extension."
        :type github
        :pkgname "auto-complete/auto-complete"
-       :depends (popup-github fuzzy-github))
+       :load-path ("." "lib/popup")
+       :post-init (progn
+                    (require 'auto-complete-config)
+                    (ac-config-default)))

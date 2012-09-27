@@ -2,7 +2,6 @@
 
 ;; auto-complete ポップアップメニューで自動補完
 ;; @see: http://cx4a.org/software/auto-complete/manual.ja.html
-(require 'auto-complete)
 (global-auto-complete-mode t)
 ;; Maybe default-enable-multibyte-characters is t by default
 (setq default-enable-multibyte-characters t)
