@@ -48,7 +48,6 @@
         pure-mode
         lua-mode
         tuareg-mode
-        typerex
 
         yaml-mode
         geiser
