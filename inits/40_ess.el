@@ -64,3 +64,6 @@
 
 ;; R 起動直前の処理
 (add-hook 'ess-pre-run-hook (lambda () (ess-load-hook t)))
+
+;;; julia
+(setq inferior-julia-program-name (expand-file-name "~/software/julia/julia/bin/julia-release-basic"))
