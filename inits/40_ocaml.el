@@ -151,8 +151,6 @@ Special keys for utop:
         (setq utop-completion nil)))))
 (eval-after-load "utop"
   '(progn
-     (defun utop ()
-       (utop2))
      (defun utop-process-line (line)
        (utop-process-line2 line))))
 
