@@ -66,7 +66,9 @@
         scss-mode
         js2-mode-mooz
 
-        yatex
+        auctex
+        ac-math
+
         matlab-emacs
 
         ess-github
