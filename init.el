@@ -64,6 +64,7 @@
     (setenv "PATH" (concat dir ":" (getenv "PATH")))
     (setq exec-path (append (list dir) exec-path))))
 (add-path (expand-file-name "~/.emacs.d/bin"))
+(add-path (expand-file-name "~/lcl/bin"))
 
 ;; load-path の設定
 (add-to-list 'load-path "~/.emacs.d")
