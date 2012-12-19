@@ -34,6 +34,8 @@
     ;; # の数によってコメントのインデントの挙動が変わるのを無効にする
     (setq ess-fancy-comments nil)
     (setq ess-loaded-p t)
+    ;; 幅調整用のキーバインド
+    (define-key inferior-ess-mode-map (kbd "C-c C-w") 'ess-execute-screen-options)
     (unless from-iess-p
       ;; ウィンドウが1つの状態で *.R を開いた場合はウィンドウを縦に分割して R を表示する
       (when (one-window-p)
@@ -67,3 +69,5 @@
 
 ;;; julia
 (setq inferior-julia-program-name (expand-file-name "~/software/julia/julia/bin/julia-release-basic"))
+
+
