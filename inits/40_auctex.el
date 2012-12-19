@@ -10,6 +10,9 @@
 
 (setq preview-image-type 'dvipng)
 
+;; 上付き，下付きの無効化
+(setq font-latex-fontify-script nil)
+
 ;; (setq TeX-source-correlate-method 'synctex)
 ;; (setq TeX-source-correlate-start-server t)
 ;; (add-hook 'LaTeX-mode-hook 'TeX-source-correlate-mode)
