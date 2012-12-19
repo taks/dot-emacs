@@ -7,9 +7,11 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
 (global-set-key (kbd "C-\\") nil)
-(global-set-key (kbd "C-x r b") 'anything-bookmarks)
+(global-set-key (kbd "C-x r b") 'helm-bookmarks)
 (global-set-key (kbd "C-d") 'delete-backward-char)
-(global-set-key (kbd "C-x f") 'anything-for-files)
+(global-set-key (kbd "C-x f") 'helm-for-files)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-t") nil)
 
 (progn
   (require 'cc-cmds)
@@ -60,10 +62,9 @@
   (progn
     (define-sequential-command seq-end
       vz-right-of-screen end-of-buffer seq-return)
-    (global-set-key (kbd "C-:") 'seq-end))
-  )
+    (global-set-key (kbd "C-:") 'seq-end)))
 
-(global-set-key (kbd "M-y") 'anything-show-kill-ring)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
 
 
 ;;window-sysytemでの設定
@@ -91,7 +92,4 @@
   (require 'nav)
   (global-set-key (kbd "C-x C-d") 'nav-toggle))
 
-;;; anything
-(global-set-key (kbd "M-x") 'anything-execute-extended-command)
 
-(global-set-key (kbd "M-t") nil)

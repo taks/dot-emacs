@@ -16,8 +16,6 @@
   (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
   )
 
-(require 'anything-coding-system)
-
 
 (progn
   ;; windows

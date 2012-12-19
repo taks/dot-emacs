@@ -1,19 +1,16 @@
-;;; anything-coding-system.el ---
+;;; helm-coding-system.el ---
 ;;; 参考: http://d.hatena.ne.jp/kitokitoki/20101120/p1
 
-(require 'anything)
-(require 'anything-config)
-
-(defvar anything-c-source-coding-system
+(defvar helm-c-source-coding-system
   '((name . "文字コードと改行コードを変換する")
-    (candidates . anything-coding-system-candidates)
+    (candidates . helm-coding-system-candidates)
     (action .
       (("バッファの文字コード/改行コードを指定したものに変換して読込みなおす" .
         revert-buffer-with-coding-system)
        ("ファイルの文字コード/改行コードを指定したものに変換する(保存はしない)" .
         set-buffer-file-coding-system)))))
 
-(defvar anything-coding-system-candidates
+(defvar helm-coding-system-candidates
       '(("UTF-8  LF" . utf-8-unix)
         ("UTF-8  CR" . utf-8-mac)
         ("UTF-8  CRLF" . utf-8-dos)
@@ -24,13 +21,12 @@
         ("sjis   CR" . sjis-mac)
         ("sjis   LF" . sjis-unix)))
 
-(defun anything-coding-system ()
+(defun helm-coding-system ()
   (interactive)
-  (anything-other-buffer
-   '(anything-c-source-coding-system)
-      "*anything-coding-system*"))
+  (helm-other-buffer
+   '(helm-c-source-coding-system)
+      "*helm-coding-system*"))
 
-(defalias 'coding 'anything-coding-system)
+(defalias 'coding 'helm-coding-system)
 
-(provide 'anything-coding-system)
-;;; anything-coding-system.el ends here
+(provide 'helm-coding-system)

@@ -33,7 +33,7 @@
 ;; 表示しないバッファの設定 (for emacs23.2 ?)
 (require 'ibuf-ext)
 (add-to-list 'ibuffer-never-show-predicates "^\\*tramp/ssh")
-(add-to-list 'ibuffer-never-show-predicates "^\\*anything[\\* ]")
+(add-to-list 'ibuffer-never-show-predicates "^\\*helm[\\* ]")
 
 (add-hook 'ibuffer-hook
           '(lambda ()

@@ -14,7 +14,7 @@
 
 (setq my-packages
       '(el-get
-        anything
+        helm
         org-mode
         markdown-mode
         split-root
