@@ -1,0 +1,7 @@
+(:name emacs-git-gutter
+       :type git :url "https://github.com/syohex/emacs-git-gutter.git"
+       :features git-gutter
+       :post-init (add-hook 'after-save-hook
+                            (lambda ()
+                              (if (zerop (call-process-shell-command "git rev-parse --show-toplevel"))
+                                  (git-gutter)))))
