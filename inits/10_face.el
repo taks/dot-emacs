@@ -10,7 +10,8 @@
 (set-face-foreground 'fringe "white")
 
 ;;色の設定
-(color-theme-calm-forest)
+(setq custom-theme-directory "~/.emacs.d/themes/")
+(load-theme 'forest-monk)
 
 ;; タブ, 全角スペース、改行直前の半角スペースを表示する
 ;; 参考: http://openlab.dino.co.jp/2008/08/29/230500336.html

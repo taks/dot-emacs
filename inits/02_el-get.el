@@ -22,8 +22,6 @@
         yasnippet
         anything-c-yasnippet
 
-        color-theme-bzr
-
         auto-complete-github
         ;; fuzzy
 
