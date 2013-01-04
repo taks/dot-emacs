@@ -1,0 +1,10 @@
+(:name fsharp-mode
+       :description "Major mode for editing fsharp code."
+       :type github
+       :pkgname "fsharp/fsharpbinding"
+       :load-path ("emacs")
+       :post-init (progn
+                    (add-to-list 'auto-mode-alist '("\\.fs[iylx]?$" . fsharp-mode))
+                    (autoload 'fsharp-mode "fsharp-mode" "Major mode for editing F# code." t)
+                    (autoload 'run-fsharp "inf-fsharp-mode" "Run an inferior F# process." t)
+                    (setq inferior-fsharp-program "fsi --readline-")))

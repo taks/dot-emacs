@@ -47,7 +47,7 @@
         lua-mode
         tuareg-mode
         typerex2
-
+        fsharp-mode
         yaml-mode
         geiser
         slime
