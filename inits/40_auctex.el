@@ -13,15 +13,37 @@
 ;; 上付き，下付きの無効化
 (setq font-latex-fontify-script nil)
 
-;; (setq TeX-source-correlate-method 'synctex)
-;; (setq TeX-source-correlate-start-server t)
-;; (add-hook 'LaTeX-mode-hook 'TeX-source-correlate-mode)
+;; synctex
+(setq TeX-source-correlate-method 'synctex)
+(setq TeX-source-correlate-start-server t)
+(add-hook 'LaTeX-mode-hook 'TeX-source-correlate-mode)
+(defun Okular-make-url () (concat
+                           "file://"
+                           (expand-file-name (funcall file (TeX-output-extension) t)
+                                             (file-name-directory (TeX-master-file)))
+                           "#src:"
+                           (TeX-current-line)
+                           (expand-file-name (TeX-master-directory))
+                           "./"
+                           (TeX-current-file-name-master-relative)))
+(add-hook 'LaTeX-mode-hook '(lambda ()
+                              (add-to-list 'TeX-expand-list
+                                           '("%u" Okular-make-url))))
+(setq TeX-view-program-list
+      '(("Okular" "okular --unique %u")))
+(setq TeX-view-program-selection
+      '((output-pdf "Okular")
+        (output-dvi "Okular")))
+
 (add-hook 'LaTeX-mode-hook 'TeX-PDF-mode)
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
 (add-hook 'LaTeX-mode-hook (function (lambda ()
   (local-unset-key "\n")
   (add-to-list 'TeX-command-list
-               '("xelatex" "latexmk -xelatex %t"
+               '("xelatex" "xelatex %S %t"
+                 TeX-run-TeX nil (latex-mode) :help "Run ASCII pLaTeX"))
+  (add-to-list 'TeX-command-list
+               '("xelatexmk" "latexmk -e '$pdflatex=q/xelatex %S/' -xelatex %t"
                  TeX-run-TeX nil (latex-mode) :help "Run ASCII pLaTeX"))
 
   ;; change preview background
