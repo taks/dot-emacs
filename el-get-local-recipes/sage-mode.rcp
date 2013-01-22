@@ -1,3 +1,4 @@
 (:name sage-mode
        :type hg :url "https://bitbucket.org/gvol/sage-mode"
-       :load-path ("emacs"))
+       :load-path ("emacs")
+       :features sage)
