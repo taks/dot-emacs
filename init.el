@@ -66,6 +66,9 @@
 (add-path (expand-file-name "~/.emacs.d/bin"))
 (add-path (expand-file-name "~/lcl/bin"))
 (add-path (expand-file-name "~/.opam/current/bin"))
+(setenv "LD_LIBRARY_PATH" (concat (expand-file-name "~/lcl/lib") ":"
+                                  (expand-file-name "~/local/lib") ":"
+                                  (getenv "LD_LIBRARY_PATH")))
 
 ;; load-path の設定
 (add-to-list 'load-path "~/.emacs.d")
