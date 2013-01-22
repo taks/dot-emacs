@@ -269,4 +269,5 @@
 (define-key folding-mode-map (kbd "M-t") 'folding-toggle-show-hide)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; tramp
+(require 'tramp)
 (add-to-list 'tramp-remote-path 'tramp-own-remote-path)
