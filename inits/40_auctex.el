@@ -43,7 +43,7 @@
                '("xelatex" "xelatex %S %t"
                  TeX-run-TeX nil (latex-mode) :help "Run ASCII pLaTeX"))
   (add-to-list 'TeX-command-list
-               '("xelatexmk" "latexmk -e '$pdflatex=q/xelatex %S/' -xelatex %t"
+               '("xelatexmk" "latexmk -e '$pdflatex=q/xelatex %S/' -pdf %t"
                  TeX-run-TeX nil (latex-mode) :help "Run ASCII pLaTeX"))
 
   ;; change preview background
