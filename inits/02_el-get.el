@@ -25,9 +25,6 @@
         auto-complete-github
         ;; fuzzy
 
-        shell-command
-        multi-term
-
         color-moccur
         moccur-edit
         anything-c-moccur
@@ -91,8 +88,6 @@
 
         hideshowvis
         folding-my
-
-        shell-pop
 
         revive
         windows
