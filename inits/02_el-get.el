@@ -95,7 +95,7 @@
         shell-pop
 
         revive
-        windows-from-http
+        windows
 
         sunrise-commander
 
