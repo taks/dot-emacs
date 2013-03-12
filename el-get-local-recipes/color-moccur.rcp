@@ -1,2 +1,3 @@
 (:name color-moccur :type http
-       :url "http://www.bookshelf.jp/elc/color-moccur.el")
+       :url "http://www.bookshelf.jp/elc/color-moccur.el"
+       :features color-moccur)

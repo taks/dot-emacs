@@ -1,2 +1,3 @@
 (:name moccur-edit :type http
-       :url "http://www.bookshelf.jp/elc/moccur-edit.el")
+       :url "http://www.bookshelf.jp/elc/moccur-edit.el"
+       :features moccur-edit)

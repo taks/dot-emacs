@@ -1,9 +1,6 @@
 ;;; 45_moccur.el ---
 ;; moccur 関連の設定
 
-;; @see: http://d.hatena.ne.jp/IMAKADO/20080724/1216882563
-(require 'color-moccur)
-(require 'moccur-edit)
 ;; 複数の検索語や、特定のフェイスのみマッチ等の機能を有効にする
 ;; 詳細は http://www.bookshelf.jp/soft/meadow_50.html#SEC751
 (setq moccur-split-word t)
