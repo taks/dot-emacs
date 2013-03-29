@@ -49,7 +49,6 @@
 (define-key zencoding-mode-keymap (kbd "C-j") nil)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; bibtex
-(modify-coding-system-alist 'file "\\.bib\\'" 'euc-jp)
 (add-hook 'bibtex-mode-hook
           '(lambda ()
              (local-unset-key (kbd "C-j"))))
