@@ -77,6 +77,14 @@
        (global-set-key (kbd "<mouse-3>") 'key-context-menu)
        ))
 
+(progn
+  (defun backward-kill-word-or-kill-region ()
+    (interactive)
+    (if (or (not transient-mark-mode) (region-active-p))
+        (kill-region (region-beginning) (region-end))
+      (backward-kill-word 1)))
+  (global-set-key (kbd "C-w") 'backward-kill-word-or-kill-region))
+
 ;;doc-viewでの設定
 ;(define-key doc-view-mode-map "k" nil)
 
