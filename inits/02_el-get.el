@@ -54,7 +54,6 @@
 
         cl-test-more
 
-        ;; rinari-taks
         zencoding-mode
         moz-repl
         scss-mode

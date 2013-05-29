@@ -68,23 +68,4 @@ and source-file directory for your debugger." t)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; rinari
-;; @see: http://rinari.rubyforge.org/
-(add-to-list 'load-path "~/.emacs.d/el-get/rinari-taks")
-(add-to-list 'load-path "~/.emacs.d/el-get/rinari-taks/util")
-(add-to-list 'load-path "~/.emacs.d/el-get/rinari-taks/util/jump")
-
-;; Interactively Do Things (highly recommended, but not strictly required)
-(require 'ido)
-(ido-mode t)
-(require 'rinari)
-
-;; rhtml-mode
-;; @see: http://rinari.rubyforge.org/rhtml_002dMode.html#rhtml_002dMode
-(add-to-list 'load-path "~/.emacs.d/el-get/rhtml-mode")
-(require 'rhtml-mode)
-(add-to-list 'auto-mode-alist '("\\.erb$" . rhtml-mode))
-(add-hook 'rhtml-mode-hook
-          (lambda () (rinari-launch)))
-
 (require 'anything-refe)
