@@ -8,6 +8,7 @@
 
 (setq verilog-compiler "verilator")
 (setq verilog-linter "verilator --lint-only")
+(setq verilog-indent-lists nil)
 
 
 (defun flymake-verilog-init ()
