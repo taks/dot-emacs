@@ -93,7 +93,6 @@
 
         popwin
 
-        anything-git-project
         magit
         emacs-git-gutter
 
