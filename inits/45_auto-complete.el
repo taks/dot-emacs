@@ -5,12 +5,7 @@
 (global-auto-complete-mode t)
 ;; Maybe default-enable-multibyte-characters is t by default
 (setq default-enable-multibyte-characters t)
-;; デフォルトの情報源
-(require 'auto-complete-yasnippet)
-(setq-default ac-sources '(ac-source-words-in-same-mode-buffers
-                           ac-source-yasnippet
-                           ac-source-filename
-                           ))
+
 ;; @see: http://bitbucket.org/sakito/dot.emacs.d/src/047708c00326/site-start.d/init_ac.el
 ;; クイックヘルプが表示されるとバッファが大きく変更される場合があるので停止
 (setq ac-use-quick-help nil)
