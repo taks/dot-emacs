@@ -93,8 +93,6 @@
 
         popwin
 
-        anything-replace-string
-
         anything-git-project
         magit
         emacs-git-gutter
