@@ -30,3 +30,5 @@
 ;; 色の変更
 (add-hook 'AC-mode-hook
           (set-face-background 'ac-selection-face "gray35"))
+
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
