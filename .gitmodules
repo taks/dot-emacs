@@ -1,0 +1,3 @@
+[submodule "init-loader"]
+	path = init-loader
+	url = https://github.com/emacs-jp/init-loader.git

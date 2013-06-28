@@ -71,6 +71,7 @@
                                   (getenv "LD_LIBRARY_PATH")))
 
 ;; load-path の設定
+(add-to-list 'load-path "~/.emacs.d/init-loader")
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/elisp")
 
@@ -80,7 +81,11 @@
   (require 'init-loader)
   ;; オブション"--debug-init"が指定された場合にはログバッファを表示
   ;; それ以外は，エラーが発生したらログバッファを表示
-  (setq init-loader-show-log-after-init (or debug-on-error 'if-error))
+  (setq init-loader-show-log-after-init  debug-on-error)
+  (add-hook 'after-init-hook
+            '(lambda ()
+               (when (not (eql (init-loader-error-log) ""))
+                 (init-loader-show-log))))
   (init-loader-load))
 
 ;; サーバーの起動
