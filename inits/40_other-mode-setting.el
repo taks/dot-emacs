@@ -145,3 +145,8 @@
 (add-hook 'pure-mode-hook
           (lambda ()
             (setq pure-libdir (replace-regexp-in-string "/bin/" "/lib/" pure-prog))))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; web-mode
+(require 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))

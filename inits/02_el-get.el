@@ -38,6 +38,7 @@
 
         historyf
 
+        web-mode
         d-mode
         pure-mode
         lua-mode
