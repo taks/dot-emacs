@@ -1,3 +1,0 @@
-;; recentfの拡張
-;; @see: http://d.hatena.ne.jp/rubikitch/20091224/recentf
-(:name recentf-ext :type emacswiki :features recentf-ext)
