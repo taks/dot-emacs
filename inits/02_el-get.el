@@ -49,8 +49,9 @@
         geiser
         slime
         ac-slime
-        paredit
-        rainbow-delimiters-github
+
+        smartparens
+        rainbow-delimiters
         ;; cl-indent-patches
 
         cl-test-more

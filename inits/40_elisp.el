@@ -1,7 +1,4 @@
 ;;; 40_elisp.el
-
-(add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; lisp-interaction-mode
 (add-hook 'lisp-interaction-mode-hook
