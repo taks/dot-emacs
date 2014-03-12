@@ -14,6 +14,9 @@
 
 (setq my-packages
       '(el-get
+
+        evil
+
         helm
         markdown-mode
         split-root
