@@ -8,6 +8,7 @@
 ;; @see: http://d.hatena.ne.jp/khiker/20100114/emacs_eof
 (setq-default indicate-empty-lines t)
 (set-face-foreground 'fringe "white")
+(setq-default indicate-buffer-boundaries 'left)
 
 ;;色の設定
 (setq custom-theme-directory "~/.emacs.d/themes/")
