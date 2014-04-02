@@ -15,5 +15,3 @@
 (evil-ex-define-cmd "wq" 'evil-save-and-delete-buffer)
 
 (define-key evil-insert-state-map "\C-k" nil)
-
-(setq evil-emacs-state-modes nil)
