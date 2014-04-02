@@ -44,3 +44,10 @@
 (add-hook 'ibuffer-mode-hook
           '(lambda ()
              (hl-line-mode t)))
+
+;; 表示形式
+(setq ibuffer-formats
+      '((mark modified read-only " "
+              (name 18 18 :left :elide) " "
+              (mode 16 16 :left :elide) " " filename-and-process)
+        (mark " " (name 16 -1) " " filename)))
