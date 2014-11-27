@@ -71,8 +71,6 @@
                                   (getenv "LD_LIBRARY_PATH")))
 
 ;; load-path の設定
-(add-to-list 'load-path "~/.emacs.d/init-loader")
-(add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/elisp")
 
 ;; elファイルのコンパイル時にエラーがでるので，その対処
