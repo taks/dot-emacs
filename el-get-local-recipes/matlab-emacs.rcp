@@ -1,2 +1,0 @@
-(:name matlab-emacs :type git :url "https://github.com/ruediger/matlab-emacs.git"
-       :load-path ("."))

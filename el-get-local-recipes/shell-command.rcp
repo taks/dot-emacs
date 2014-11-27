@@ -1,2 +1,0 @@
-(:name shell-command :type http
-       :url "http://www.namazu.org/~tsuchiya/elisp/shell-command.el")

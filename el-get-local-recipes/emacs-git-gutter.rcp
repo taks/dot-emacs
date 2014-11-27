@@ -1,4 +1,0 @@
-(:name emacs-git-gutter
-       :type git :url "https://github.com/syohex/emacs-git-gutter.git"
-       :features git-gutter
-       :post-init (global-git-gutter-mode t))

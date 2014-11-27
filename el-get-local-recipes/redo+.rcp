@@ -1,5 +1,0 @@
-(:name redo+ :type emacswiki
-       :features "redo+"
-       :pre-init (progn
-                   (global-set-key (kbd "C-M-/") 'redo)
-                   (setq undo-no-redo t)))

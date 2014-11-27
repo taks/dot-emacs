@@ -1,9 +1,0 @@
-(:name auto-complete-github
-       :website "http://cx4a.org/software/auto-complete/"
-       :description "The most intelligent auto-completion extension."
-       :type github
-       :pkgname "auto-complete/auto-complete"
-       :load-path ("." "lib/popup")
-       :post-init (progn
-                    (require 'auto-complete-config)
-                    (ac-config-default)))

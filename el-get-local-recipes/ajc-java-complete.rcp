@@ -1,2 +1,0 @@
-(:name ajc-java-complete :type git :url "https://github.com/jixiuf/ajc-java-complete.git"
-       :build ("javac Tags.java" "java Tags"))

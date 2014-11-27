@@ -1,7 +1,0 @@
-(:name pure-mode
-       :type http
-       :url "https://pure-lang.googlecode.com/hg/pure/etc/pure-mode.el.in"
-       :localname "pure-mode.el"
-       :post-init (progn
-                    (autoload 'pure-mode "pure-mode" "" t)
-                    (add-to-list 'auto-mode-alist '("\\.pure\\(rc\\)?$" . pure-mode))))

@@ -6,6 +6,7 @@
 !/.gitmodules
 !/README
 !/Rakefile
+!/Cask
 !/init.el
 !/bin/
 !/inits/

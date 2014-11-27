@@ -1,3 +1,0 @@
-(:name scratch-log :type git
-       :url "https://github.com/wakaran/scratch-log.git"
-       :features scratch-log)

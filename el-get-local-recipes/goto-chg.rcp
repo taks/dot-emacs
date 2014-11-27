@@ -1,5 +1,0 @@
-(:name goto-chg :type git :url "https://github.com/martinp26/goto-chg.git"
-       :features goto-chg
-       :post-init  (progn
-                     (global-set-key (kbd "C-.") 'goto-last-change)
-                     (global-set-key (kbd "C-,") 'goto-last-change-reverse)))

@@ -77,6 +77,11 @@
 
 ;; elファイルのコンパイル時にエラーがでるので，その対処
 (setq warning-suppress-types nil)
+
+(progn
+  (require 'cask "~/.cask/cask.el")
+  (cask-initialize))
+
 (progn
   (require 'init-loader)
   ;; オブション"--debug-init"が指定された場合にはログバッファを表示

@@ -1,4 +1,0 @@
-(:name jaunte :type git
-       :url "https://github.com/kawaguchi/jaunte.el.git"
-       :feature jaunte
-       :post-init (global-set-key (kbd "C-c SPC") 'jaunte))
