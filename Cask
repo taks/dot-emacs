@@ -37,3 +37,4 @@
 (depends-on "git-gutter")
 (depends-on "jaunte")
 (depends-on "ess")
+(depends-on "helm-swoop")

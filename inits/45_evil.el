@@ -14,4 +14,7 @@
   (evil-delete-buffer (current-buffer)))
 (evil-ex-define-cmd "wq" 'evil-save-and-delete-buffer)
 
+;; keybind
 (define-key evil-insert-state-map "\C-k" nil)
+
+(define-key evil-motion-state-map "/" 'helm-swoop)
