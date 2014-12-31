@@ -41,12 +41,9 @@
       hs-special-modes-alist)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; zencoding
-(require 'zencoding-mode)
-(add-hook 'sgml-mode-hook 'zencoding-mode)
-(add-hook 'nxml-mode 'zencoding-mode)
-(define-key zencoding-mode-keymap (kbd "C-M-j") 'zencoding-expand-line)
-(define-key zencoding-mode-keymap (kbd "C-j") nil)
+;; emmet-mode
+(add-hook 'sgml-mode-hook 'emmet-mode)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; bibtex
 (add-hook 'bibtex-mode-hook

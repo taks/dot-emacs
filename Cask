@@ -33,7 +33,7 @@
 (depends-on "auto-complete")
 (depends-on "nav")
 (depends-on "ac-math")
-(depends-on "zencoding-mode")
+(depends-on "emmet-mode")
 (depends-on "git-gutter")
 (depends-on "jaunte")
 (depends-on "ess")
